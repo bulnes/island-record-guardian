@@ -1,0 +1,43 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: #000000;
+}
+
+.content {
+  height: 100%;
+  width: 100%;
+}
+
+.content--mobile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  .content--mobile {
+    display: none;
+  }
+}
+
+.content--mobile img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.content--mobile img + img {
+  margin-top: -1px;
+}
